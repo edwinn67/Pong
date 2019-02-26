@@ -6,6 +6,15 @@ public abstract class CollidableObject
         extends Sprite
         implements Collidable {
 
+    private int collisionPoint;
+
+    public enum CollisionPoint {
+        TOP,
+        BOTTOM,
+        LEFT,
+        RIGHT
+    }
+
     // override methods
     @Override
     public int getTop() {
@@ -40,5 +49,14 @@ public abstract class CollidableObject
     public boolean isCollidingWith(CollidableObject obj) {
         return ((this.getBottom() > obj.getTop() && this.getTop() < obj.getBottom()))
                 && (this.getRight() > obj.getLeft() && this.getLeft() < obj.getRight());
+    }
+
+
+    public int getCollisionPoint() {
+        return collisionPoint;
+    }
+
+    public void setCollisionPoint(int collisionPoint) {
+        this.collisionPoint = collisionPoint;
     }
 }

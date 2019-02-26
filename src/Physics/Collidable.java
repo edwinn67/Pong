@@ -8,6 +8,4 @@ public interface Collidable {
     int getRight();
     int getCenterX();
     int getCenterY();
-
-//    void updateCollisionBox(CollisionBox r);
 }

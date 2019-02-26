@@ -3,6 +3,7 @@ package GameState;
 import Physics.PlayerDirection;
 import Sprite.Ball;
 import Sprite.Paddle;
+import Sprite.Sprite;
 
 import java.awt.*;
 
@@ -13,13 +14,6 @@ public class World {
     private PlayerDirection playerDirection;
 
     // getters and setters
-    public Rectangle getBounds() {
-        return bounds;
-    }
-    public void setBounds(Rectangle bounds) {
-        this.bounds = bounds;
-        initSprites();
-    }
     public PlayerDirection getPlayerDirection() {
         return playerDirection;
     }
@@ -32,10 +26,14 @@ public class World {
     private Paddle paddle2;
     private Ball ball;
 
-    public World() {
+    public World(Rectangle bounds) {
+        this.bounds = bounds;
+
         paddle1 = new Paddle();
         paddle2 = new Paddle();
         ball = new Ball(20);
+
+        initSprites();
     }
 
     private void initSprites() {
@@ -56,14 +54,13 @@ public class World {
         g.setColor(new Color(0, 0, 0));
         g.fillRect(bounds.x, bounds.y, bounds.width, bounds.height);
 
-//        paddle1.draw(g);
-//        paddle2.draw(g);
+        paddle1.draw(g);
+        paddle2.draw(g);
         ball.draw(g);
     }
 
     public void update() {
         updatePlayer1();
-//        handleMovesOf(ball);
         updateBall();
         updatePlayer2();
     }
@@ -76,56 +73,38 @@ public class World {
         }
     }
     private void updatePlayer2() {
-        if (paddle2.getCenterY() < ball.getCenterY())
-            paddle2.setY(paddle2.getY() +10);
-        else
-        if (paddle2.getCenterY() > ball.getCenterY())
-            paddle2.setY(paddle2.getY() -10);
+        if (!(paddle2.getTop() < ball.getTop()
+                && paddle2.getBottom() > ball.getBottom())) {
+            paddle2.setY(paddle2.getY() +ball.getDy());
+        }
     }
     private void updateBall() {
         handleBallCollision();
         ball.move();
     }
-    private boolean handleBoundsCollisions() {
-        return (ball.getY() < bounds.y
-                || ball.getY() > bounds.height);
-    }
-    private void handleBoundsCollisions(int i) {
-        if (ball.getTop() < bounds.y || ball.getBottom() > bounds.height) {
+
+    private void handleBoundsCollisions() {
+        if (ball.getTop() +ball.getDy() < bounds.y
+                || ball.getBottom() +ball.getDy() > bounds.height) {
             ball.changeDy();
         }
-        else if (ball.getLeft() < bounds.x || ball.getRight() > bounds.width) {
+        else if (ball.getLeft() +ball.getDx() < bounds.x
+                || ball.getRight() +ball.getDx() > bounds.width) {
             ball.changeDx();
         }
     }
-    private boolean isCollidingWithPaddle() {
-        return (ball.isCollidingWith(paddle1)
-                || ball.isCollidingWith(paddle2));
+    private void handlePaddlesCollisions() {
+        if (ball.isCollidingWith(paddle1)
+                || ball.isCollidingWith(paddle2)) {
+            ball.changeDx();
+        }
     }
     private void handleBallCollision() {
-        /*if (handleBoundsCollisions()
-                || isCollidingWithPaddle()) {
-            ball.changeDx();
-        }*/
-        handleBoundsCollisions(0);
+        // handling ball collisions with walls
+        handleBoundsCollisions();
+        // handling ball collisions with paddles
+        handlePaddlesCollisions();
     }
-
-
-
-    //    private void handleMovesOf(Sprite player) {
-//        if (playerDirection == (PlayerDirection.DOWN)) {
-//            player.setY(player.getY() +1);
-//        }
-//        if (playerDirection == (PlayerDirection.UP)) {
-//            player.setY(player.getY() -1);
-//        }
-//        if (playerDirection == (PlayerDirection.RIGHT)) {
-//            player.setX(player.getX() +1);
-//        }
-//        if (playerDirection == (PlayerDirection.LEFT)) {
-//            player.setX(player.getX() -1);
-//        }
-//    }
 
 
     // DEBUG
@@ -134,5 +113,45 @@ public class World {
         point.setX(bounds.width /2);
         point.setY(bounds.height /2);
         point.draw(g, new Color(0, 255, 252));
+    }
+
+
+
+
+
+    private void handlePaddlesCollisions(Paddle paddle) {
+        if (ball.isCollidingWith(paddle)) {
+            /*if (ball.getTop() + ball.getDy() > paddle.getTop()
+                    && ball.getBottom() + ball.getDy() < paddle.getBottom()) {
+                ball.changeDy();
+            } else if (ball.getRight() + ball.getDx() > paddle.getLeft()
+                    && ball.getBottom() + ball.getDx() < paddle.getBottom()) {
+                ball.changeDx();
+            }*/
+            ball.changeDx();
+
+        }
+    }
+    private boolean isCollidingWithWalls() {
+        return (ball.getY() < bounds.y
+                || ball.getY() > bounds.height);
+    }
+    private boolean isCollidingWithPaddle() {
+        return (ball.isCollidingWith(paddle1)
+                || ball.isCollidingWith(paddle2));
+    }
+    private void handleMovesOf(Sprite player) {
+        if (playerDirection == (PlayerDirection.DOWN)) {
+            player.setY(player.getY() +10);
+        }
+        if (playerDirection == (PlayerDirection.UP)) {
+            player.setY(player.getY() -10);
+        }
+        if (playerDirection == (PlayerDirection.RIGHT)) {
+            player.setX(player.getX() +10);
+        }
+        if (playerDirection == (PlayerDirection.LEFT)) {
+            player.setX(player.getX() -10);
+        }
     }
 }

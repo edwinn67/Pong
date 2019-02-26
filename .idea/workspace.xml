@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b0ea76-a13a-4fe7-bc11-c59857f2bfcc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Physics/BouncingDynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Physics/Controllable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PONG/Core/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Core/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PONG/Core/GameFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Core/GameFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PONG/Core/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Core/GamePanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PONG/GameState/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/GameState/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Physics/BouncingDynamic.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PONG/Sprite/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Sprite/Ball.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PONG/Sprite/Collidable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PONG/Sprite/CollidableObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PONG/Sprite/Paddle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Sprite/Paddle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PONG/Sprite/PlayerDirection.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PONG/Sprite/Sprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Sprite/Sprite.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameState/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameState/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Physics/BouncingDynamic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Physics/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Physics/Collidable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Physics/CollidableObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Physics/CollidableObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sprite/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sprite/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sprite/Collidable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Physics/Collidable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sprite/CollidableObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Physics/CollidableObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sprite/Paddle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sprite/Paddle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sprite/PlayerDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Physics/PlayerDirection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sprite/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sprite/Sprite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +21,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Core/GameFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state relative-caret-position="319">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#426#427#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,15 +41,76 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Core/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="319">
+              <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#paint#0;class#GamePanel#0" />
-                <element signature="method#keyTyped#0;class#GamePanel#0" />
-                <element signature="method#keyPressed#0;class#GamePanel#0" />
-                <element signature="method#keyReleased#0;class#GamePanel#0" />
-                <element signature="method#actionPerformed#0;class#GamePanel#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GameState/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#World#0;class#World#0" />
+                <element signature="method#initSprites#0;class#World#0" />
+                <element signature="method#update#0;class#World#0" />
+                <element signature="method#updatePlayer1#0;class#World#0" />
+                <element signature="method#updatePlayer2#0;class#World#0" />
+                <element signature="method#updateBall#0;class#World#0" />
+                <element signature="method#handleBoundsCollisions#1;class#World#0" />
+                <element signature="method#handlePaddlesCollisions#1;class#World#0" />
+                <element signature="method#handleBallCollision#0;class#World#0" />
+                <element signature="method#handlePaddlesCollisions#1;class#World#0" />
+                <element signature="method#isCollidingWithWalls#0;class#World#0" />
+                <element signature="method#isCollidingWithPaddle#0;class#World#0" />
+                <element signature="method#handleMovesOf#0;class#World#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Physics/PlayerDirection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="8" column="1" lean-forward="true" selection-start-line="2" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Physics/CollidableObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="50" column="86" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="86" />
+              <folding>
+                <element signature="method#getBottom#0;class#CollidableObject#0" />
+                <element signature="method#getRight#0;class#CollidableObject#0" />
+                <element signature="method#getCenterX#0;class#CollidableObject#0" />
+                <element signature="method#getCenterY#0;class#CollidableObject#0" />
+                <element signature="e#1200#1201#0" expanded="true" />
+                <element signature="e#1237#1238#0" expanded="true" />
+                <element signature="e#1294#1295#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sprite/Paddle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+              <folding>
+                <element signature="method#Paddle#0;class#Paddle#0" />
+                <element signature="method#Paddle#1;class#Paddle#0" />
               </folding>
             </state>
           </provider>
@@ -64,97 +119,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sprite/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+            <state relative-caret-position="181">
+              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#Ball#1;class#Ball#0" />
                 <element signature="method#Ball#2;class#Ball#0" />
                 <element signature="method#draw#0;class#Ball#0" />
                 <element signature="method#draw#1;class#Ball#0" />
-                <element signature="e#1643#1644#0" expanded="true" />
-                <element signature="e#1667#1668#0" expanded="true" />
-                <element signature="e#1689#1690#0" expanded="true" />
-                <element signature="e#1713#1714#0" expanded="true" />
+                <element signature="method#move#0;class#Ball#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameState/World.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1782">
-              <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
-              <folding>
-                <element signature="method#setBounds#0;class#World#0" />
-                <element signature="method#World#0;class#World#0" />
-                <element signature="method#initSprites#0;class#World#0" />
-                <element signature="method#update#0;class#World#0" />
-                <element signature="method#updatePlayer2#0;class#World#0" />
-                <element signature="method#isCollidingWithPaddle#0;class#World#0" />
-                <element signature="e#1642#1691#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Physics/BouncingDynamic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Physics/CollidableObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-              <folding>
-                <element signature="method#getBottom#0;class#CollidableObject#0" />
-                <element signature="method#getRight#0;class#CollidableObject#0" />
-                <element signature="method#getCenterX#0;class#CollidableObject#0" />
-                <element signature="method#getCenterY#0;class#CollidableObject#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Physics/Collidable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Physics/Controllable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Physics/PlayerDirection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Sprite/Sprite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -166,7 +139,6 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -175,6 +147,7 @@
       <find>paint</find>
       <find>addNo</find>
       <find>no</find>
+      <find>dx</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,20 +168,13 @@
         <option value="$PROJECT_DIR$/src/Interfaces/PlayerDirection.java" />
         <option value="$PROJECT_DIR$/src/Core/GameFrame.java" />
         <option value="$PROJECT_DIR$/src/Sprite/Paddle.java" />
-        <option value="$PROJECT_DIR$/src/Sprite/AAA/CollidableObject.java" />
-        <option value="$PROJECT_DIR$/src/Sprite/CollidableObject.java" />
-        <option value="$PROJECT_DIR$/src/Objects/Dynamic.java" />
-        <option value="$PROJECT_DIR$/src/Objects/PlayerDirection.java" />
-        <option value="$PROJECT_DIR$/src/Objects/Collidable.java" />
-        <option value="$PROJECT_DIR$/src/Objects/CollidableObject.java" />
-        <option value="$PROJECT_DIR$/src/Objects/BouncingDynamic.java" />
-        <option value="$PROJECT_DIR$/src/Physics/BouncingDynamic.java" />
-        <option value="$PROJECT_DIR$/src/GameState/World.java" />
-        <option value="$PROJECT_DIR$/src/Core/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/Sprite/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/Physics/Collidable.java" />
+        <option value="$PROJECT_DIR$/src/Physics/BouncingDynamic.java" />
+        <option value="$PROJECT_DIR$/src/Physics/CollidableObject.java" />
         <option value="$PROJECT_DIR$/src/Sprite/Ball.java" />
-        <option value="$PROJECT_DIR$/src/Physics/Dynamic.java" />
-        <option value="$PROJECT_DIR$/src/Physics/Controllable.java" />
+        <option value="$PROJECT_DIR$/src/Core/GamePanel.java" />
+        <option value="$PROJECT_DIR$/src/GameState/World.java" />
       </list>
     </option>
   </component>
@@ -223,27 +189,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pong" type="462c0819:PsiDirectoryNode" />
+              <item name="PONG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PONG" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pong" type="462c0819:PsiDirectoryNode" />
+              <item name="PONG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PONG" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pong" type="462c0819:PsiDirectoryNode" />
+              <item name="PONG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PONG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PONG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PONG" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GameState" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PONG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PONG" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Physics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pong" type="462c0819:PsiDirectoryNode" />
+              <item name="PONG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PONG" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Sprite" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -251,20 +230,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551176000921" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551209592053" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="Debugger_Data_Views_Java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -285,6 +264,8 @@
   </component>
   <component name="RunManager" selected="Application.GameFrame">
     <configuration name="GameFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="F:/Program Files/Java/jdk-11.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Core.GameFrame" />
       <module name="PONG" />
       <extension name="coverage">
@@ -304,6 +285,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.GameFrame" />
+      <item itemvalue="Application.Main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GameFrame" />
@@ -327,17 +312,29 @@
       <workItem from="1551077970737" duration="44000" />
       <workItem from="1551079787694" duration="152000" />
       <workItem from="1551080055954" duration="533000" />
-      <workItem from="1551164439808" duration="8039000" />
+      <workItem from="1551083401765" duration="33000" />
+      <workItem from="1551131126662" duration="2241000" />
+      <workItem from="1551176844846" duration="271000" />
+      <workItem from="1551200437687" duration="8383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41981000" />
+    <option name="totallyTimeSpent" value="45640000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -345,18 +342,18 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24091381" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997923" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2360179" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32997763" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.20560747" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32885906" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32917964" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32960895" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -367,37 +364,6 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19296375" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23676012" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997923" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32960895" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32917964" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -425,124 +391,137 @@
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sprite/Paddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="123" column="6" lean-forward="true" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Physics/PlayerDirection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Physics/BouncingDynamic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Physics/Collidable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Physics/CollidableObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="method#getBottom#0;class#CollidableObject#0" />
-            <element signature="method#getRight#0;class#CollidableObject#0" />
-            <element signature="method#getCenterX#0;class#CollidableObject#0" />
-            <element signature="method#getCenterY#0;class#CollidableObject#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/GameFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameState/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="109" column="34" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
-          <folding>
-            <element signature="method#setBounds#0;class#World#0" />
-            <element signature="method#World#0;class#World#0" />
-            <element signature="method#initSprites#0;class#World#0" />
-            <element signature="method#update#0;class#World#0" />
-            <element signature="method#updatePlayer2#0;class#World#0" />
-            <element signature="method#isCollidingWithPaddle#0;class#World#0" />
-            <element signature="e#1642#1691#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Core/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#paint#0;class#GamePanel#0" />
-            <element signature="method#keyTyped#0;class#GamePanel#0" />
-            <element signature="method#keyPressed#0;class#GamePanel#0" />
-            <element signature="method#keyReleased#0;class#GamePanel#0" />
-            <element signature="method#actionPerformed#0;class#GamePanel#0" />
-          </folding>
+        <state relative-caret-position="66">
+          <caret line="2" column="63" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sprite/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sprite/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+        <state relative-caret-position="495">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Ball#1;class#Ball#0" />
-            <element signature="method#Ball#2;class#Ball#0" />
-            <element signature="method#draw#0;class#Ball#0" />
-            <element signature="method#draw#1;class#Ball#0" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Physics/Controllable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="66">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Physics/Collidable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Physics/BouncingDynamic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Physics/PlayerDirection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="2" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sprite/Paddle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding>
+            <element signature="method#Paddle#0;class#Paddle#0" />
+            <element signature="method#Paddle#1;class#Paddle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Physics/CollidableObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="50" column="86" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="86" />
+          <folding>
+            <element signature="method#getBottom#0;class#CollidableObject#0" />
+            <element signature="method#getRight#0;class#CollidableObject#0" />
+            <element signature="method#getCenterX#0;class#CollidableObject#0" />
+            <element signature="method#getCenterY#0;class#CollidableObject#0" />
+            <element signature="e#1200#1201#0" expanded="true" />
+            <element signature="e#1237#1238#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sprite/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="method#Ball#1;class#Ball#0" />
+            <element signature="method#Ball#2;class#Ball#0" />
+            <element signature="method#draw#0;class#Ball#0" />
+            <element signature="method#draw#1;class#Ball#0" />
+            <element signature="method#move#0;class#Ball#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/GameFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#426#427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Core/GamePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameState/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#World#0;class#World#0" />
+            <element signature="method#initSprites#0;class#World#0" />
+            <element signature="method#update#0;class#World#0" />
+            <element signature="method#updatePlayer1#0;class#World#0" />
+            <element signature="method#updatePlayer2#0;class#World#0" />
+            <element signature="method#updateBall#0;class#World#0" />
+            <element signature="method#handleBoundsCollisions#1;class#World#0" />
+            <element signature="method#handlePaddlesCollisions#1;class#World#0" />
+            <element signature="method#handleBallCollision#0;class#World#0" />
+            <element signature="method#handlePaddlesCollisions#1;class#World#0" />
+            <element signature="method#isCollidingWithWalls#0;class#World#0" />
+            <element signature="method#isCollidingWithPaddle#0;class#World#0" />
+            <element signature="method#handleMovesOf#0;class#World#0" />
+          </folding>
         </state>
       </provider>
     </entry>

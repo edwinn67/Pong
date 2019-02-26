@@ -15,28 +15,29 @@ public class GamePanel extends JPanel
     implements KeyListener, ActionListener {
 
     // dimensions
-    private final int WIDTH = 600;
-    private final int HEIGHT = 600;
+    private final int WIDTH = 800;
+    private final int HEIGHT = 800;
     private final int SCALE = 1;
 
     // game loop variables
-    private Timer timer = new Timer(120, this);
+    private Timer timer = new Timer(20, this);
     private LinkedList<Integer> pressedKeys = new LinkedList<>();
 
     // world instance
-    private final World world  = new World();
+    private final World world;
 
     // constructors
     GamePanel() {
         super();
         setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
+        world = new World(new Rectangle(0, 0, WIDTH, HEIGHT));
         timer.start();
     }
 
     @Override
     public void paint(Graphics g) {
-        if (world.getBounds() == null)
-            world.setBounds(getBounds());
+        /*if (world.getBounds() == null)
+            world.setBounds(getBounds());*/
         world.update();
         world.draw(g);
 
