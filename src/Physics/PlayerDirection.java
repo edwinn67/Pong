@@ -1,4 +1,4 @@
-package Sprite;
+package Objects;
 
 public enum PlayerDirection {
     STAND,
