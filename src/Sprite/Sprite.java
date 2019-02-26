@@ -23,6 +23,7 @@ public abstract class Sprite {
     public void setHeight(int height) {
         this.height = height;
     }
+    public void setLocation(int x, int y) {this.x = x; this.y = y;}
     public int getX() {
         return x;
     }

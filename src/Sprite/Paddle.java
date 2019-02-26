@@ -1,4 +1,6 @@
 package Sprite;
+import Physics.CollidableObject;
+
 import java.awt.*;
 
 public class Paddle extends CollidableObject {

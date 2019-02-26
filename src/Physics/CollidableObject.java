@@ -1,8 +1,6 @@
-package Objects;
+package Physics;
 
 import Sprite.Sprite;
-
-import java.awt.*;
 
 public abstract class CollidableObject
         extends Sprite

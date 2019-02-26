@@ -1,6 +1,6 @@
 package Physics;
 
-public interface Move {
+public interface Controllable {
     void moveUp();
     void moveDown();
     void moveLeft();

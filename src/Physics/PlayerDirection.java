@@ -1,4 +1,4 @@
-package Objects;
+package Physics;
 
 public enum PlayerDirection {
     STAND,

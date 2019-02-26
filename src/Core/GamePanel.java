@@ -1,7 +1,7 @@
 package Core;
 
 import GameState.World;
-import Sprite.PlayerDirection;
+import Physics.PlayerDirection;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,14 +19,15 @@ public class GamePanel extends JPanel
     private final int HEIGHT = 600;
     private final int SCALE = 1;
 
-    // game loop
-    Timer timer = new Timer(20, this);
-    LinkedList<Integer> pressedKeys = new LinkedList<>();
+    // game loop variables
+    private Timer timer = new Timer(120, this);
+    private LinkedList<Integer> pressedKeys = new LinkedList<>();
 
-    // world
+    // world instance
     private final World world  = new World();
 
-    public GamePanel() {
+    // constructors
+    GamePanel() {
         super();
         setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         timer.start();
@@ -46,7 +47,6 @@ public class GamePanel extends JPanel
     public void keyTyped(KeyEvent e) {
 
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
@@ -54,18 +54,15 @@ public class GamePanel extends JPanel
         if ( !pressedKeys.contains(key) )
             pressedKeys.add(key);
     }
-
     @Override
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
-        pressedKeys.remove(new Integer(key));
+        pressedKeys.remove(Integer.valueOf(key));
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//        System.out.println("Running");
         handleKeys();
-
         repaint();
     }
 

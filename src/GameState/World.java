@@ -1,6 +1,6 @@
 package GameState;
 
-import Sprite.PlayerDirection;
+import Physics.PlayerDirection;
 import Sprite.Ball;
 import Sprite.Paddle;
 
@@ -41,32 +41,76 @@ public class World {
     private void initSprites() {
         // init paddle1
         paddle1.setX(bounds.width -50);
-        paddle1.setY(bounds.height /2 - paddle1.getHeight());
+        paddle1.setY(bounds.height /2 -paddle1.getHeight());
 
         // init paddle2
         paddle2.setX(bounds.x +50);
-        paddle2.setY(bounds.height /2 - paddle2.getHeight());
+        paddle2.setY(bounds.height /2 -paddle2.getHeight());
 
         // init ball
-        ball.setX(bounds.x +120);
-        ball.setY(bounds.y +80);
+        ball.setX(bounds.width /2 -ball.getRadius()*2);
+        ball.setY(bounds.height /2 -ball.getRadius()*2);
     }
 
     public void draw(Graphics g) {
         g.setColor(new Color(0, 0, 0));
         g.fillRect(bounds.x, bounds.y, bounds.width, bounds.height);
 
-        paddle1.draw(g);
-        paddle2.draw(g);
+//        paddle1.draw(g);
+//        paddle2.draw(g);
         ball.draw(g);
     }
 
     public void update() {
-        updatePlayer();
+        updatePlayer1();
 //        handleMovesOf(ball);
         updateBall();
         updatePlayer2();
     }
+    private void updatePlayer1() {
+        if (playerDirection == (PlayerDirection.DOWN)) {
+            paddle1.setY(paddle1.getY() +10);
+        }
+        if (playerDirection == (PlayerDirection.UP)) {
+            paddle1.setY(paddle1.getY() -10);
+        }
+    }
+    private void updatePlayer2() {
+        if (paddle2.getCenterY() < ball.getCenterY())
+            paddle2.setY(paddle2.getY() +10);
+        else
+        if (paddle2.getCenterY() > ball.getCenterY())
+            paddle2.setY(paddle2.getY() -10);
+    }
+    private void updateBall() {
+        handleBallCollision();
+        ball.move();
+    }
+    private boolean handleBoundsCollisions() {
+        return (ball.getY() < bounds.y
+                || ball.getY() > bounds.height);
+    }
+    private void handleBoundsCollisions(int i) {
+        if (ball.getTop() < bounds.y || ball.getBottom() > bounds.height) {
+            ball.changeDy();
+        }
+        else if (ball.getLeft() < bounds.x || ball.getRight() > bounds.width) {
+            ball.changeDx();
+        }
+    }
+    private boolean isCollidingWithPaddle() {
+        return (ball.isCollidingWith(paddle1)
+                || ball.isCollidingWith(paddle2));
+    }
+    private void handleBallCollision() {
+        /*if (handleBoundsCollisions()
+                || isCollidingWithPaddle()) {
+            ball.changeDx();
+        }*/
+        handleBoundsCollisions(0);
+    }
+
+
 
     //    private void handleMovesOf(Sprite player) {
 //        if (playerDirection == (PlayerDirection.DOWN)) {
@@ -83,43 +127,12 @@ public class World {
 //        }
 //    }
 
-    private void updatePlayer2() {
-        if (paddle2.getCenterY() < ball.getCenterY())
-            paddle2.setY(paddle2.getY() +10);
-        else
-        if (paddle2.getCenterY() > ball.getCenterY())
-            paddle2.setY(paddle2.getY() -10);
-    }
-
-    int dx=6, dy=1;
-    private void updateBall() {
-        handleBallCollision();
-        ball.setX(ball.getX() +dx);
-    }
-    private void handleBallCollision() {
-        if (ball.isCollidingWith(paddle1)
-                || ball.isCollidingWith(paddle2)) {
-            dx++;
-            dx *= -1;
-            System.out.println(dx);
-        }
-    }
-    private void updatePlayer() {
-        if (playerDirection == (PlayerDirection.DOWN)) {
-            paddle1.setY(paddle1.getY() +10);
-        }
-        if (playerDirection == (PlayerDirection.UP)) {
-            paddle1.setY(paddle1.getY() -10);
-        }
-    }
 
     // DEBUG
     public void debug(Graphics g) {
-        g.setColor(new Color(255,0,0));
-
         Ball point = new Ball(2);
-        point.setX(ball.getCenterX());
-        point.setY(ball.getCenterY());
-        point.draw(g, new Color(255,0,0));
+        point.setX(bounds.width /2);
+        point.setY(bounds.height /2);
+        point.draw(g, new Color(0, 255, 252));
     }
 }

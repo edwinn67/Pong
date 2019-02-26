@@ -1,6 +1,4 @@
-package Objects;
-
-import java.awt.*;
+package Physics;
 
 public interface Collidable {
     boolean isCollidingWith(CollidableObject obj);
