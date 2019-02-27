@@ -30,14 +30,12 @@ public class GamePanel extends JPanel
     GamePanel() {
         super();
         setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
-        world = new World(new Rectangle(0, 0, WIDTH, HEIGHT));
+        world = new World(new Rectangle(0, 0, WIDTH*SCALE, HEIGHT*SCALE));
         timer.start();
     }
 
     @Override
     public void paint(Graphics g) {
-        /*if (world.getBounds() == null)
-            world.setBounds(getBounds());*/
         world.update();
         world.draw(g);
 

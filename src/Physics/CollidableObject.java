@@ -6,57 +6,40 @@ public abstract class CollidableObject
         extends Sprite
         implements Collidable {
 
-    private int collisionPoint;
-
-    public enum CollisionPoint {
-        TOP,
-        BOTTOM,
-        LEFT,
-        RIGHT
-    }
-
-    // override methods
-    @Override
-    public int getTop() {
-        return this.getY();
-    }
-    @Override
-    public int getBottom() {
-        return this.getY()
-                +this.getHeight();
-    }
-    @Override
-    public int getLeft() {
-        return this.getX();
-    }
-    @Override
-    public int getRight() {
-        return this.getX()
-                +this.getWidth();
-    }
-    @Override
-    public int getCenterX() {
-        return this.getX()
-                +this.getWidth() /2;
-    }
-    @Override
-    public int getCenterY() {
-        return this.getY()
-                +this.getHeight() /2;
-    }
 
     @Override
     public boolean isCollidingWith(CollidableObject obj) {
-        return ((this.getBottom() > obj.getTop() && this.getTop() < obj.getBottom()))
-                && (this.getRight() > obj.getLeft() && this.getLeft() < obj.getRight());
+        return ((this.getBottom() > obj.getTop() && this.getTop() < obj.getBottom())
+                && (this.getRight() > obj.getLeft() && this.getLeft() < obj.getRight()));
+    }
+    @Override
+    public boolean isCollidingAtTopWith(CollidableObject obj) {
+        return this.isCollidingWith(obj) &&
+                (this.getTop() +this.getDy() < obj.getBottom()
+                && this.getBottom() +this.getDy() > obj.getBottom());
+    }
+    @Override
+    public boolean isCollidingAtBottomWith(CollidableObject obj) {
+        return this.isCollidingWith(obj) &&
+                (this.getBottom() +this.getDy() > obj.getTop()
+                && this.getTop() +this.getDy() < obj.getTop());
+    }
+    @Override
+    public boolean isCollidingAtLeftWith(CollidableObject obj) {
+        return this.isCollidingWith(obj) &&
+                (this.getLeft() +this.getDx() < obj.getRight()
+                        && this.getRight() +this.getDx() > obj.getRight());
+    }
+    @Override
+    public boolean isCollidingAtRightWith(CollidableObject obj) {
+        return this.isCollidingWith(obj) &&
+                (this.getRight() +this.getDx() > obj.getLeft()
+                        && this.getLeft() +this.getDx() < obj.getLeft());
     }
 
 
-    public int getCollisionPoint() {
-        return collisionPoint;
-    }
-
-    public void setCollisionPoint(int collisionPoint) {
-        this.collisionPoint = collisionPoint;
-    }
+    public abstract int getDx();
+    public abstract void setDx(int dx);
+    public abstract int getDy();
+    public abstract void setDy(int dy);
 }

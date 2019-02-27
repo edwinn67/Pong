@@ -1,5 +1,6 @@
 package GameState;
 
+import Physics.CollidableObject;
 import Physics.PlayerDirection;
 import Sprite.Ball;
 import Sprite.Paddle;
@@ -60,50 +61,104 @@ public class World {
     }
 
     public void update() {
-        updatePlayer1();
         updateBall();
+        updatePlayer1();
         updatePlayer2();
     }
     private void updatePlayer1() {
-        if (playerDirection == (PlayerDirection.DOWN)) {
-            paddle1.setY(paddle1.getY() +10);
-        }
-        if (playerDirection == (PlayerDirection.UP)) {
-            paddle1.setY(paddle1.getY() -10);
+        if (playerDirection == (PlayerDirection.DOWN)
+                && !isCollidingAtBottom(paddle1)) {
+            paddle1.setY(paddle1.getY() +paddle1.getDy());
+        } else if (playerDirection == (PlayerDirection.UP)
+                && !isCollidingAtTop(paddle1)) {
+            paddle1.setY(paddle1.getY() -paddle1.getDy());
         }
     }
     private void updatePlayer2() {
-        if (!(paddle2.getTop() < ball.getTop()
-                && paddle2.getBottom() > ball.getBottom())) {
-            paddle2.setY(paddle2.getY() +ball.getDy());
+        if (!(paddle2.getTop() -paddle2.getHeight()/2 < ball.getTop()
+                && paddle2.getBottom() -paddle2.getHeight()/2 > ball.getBottom())) {
+            if (ball.getDy() < 0 && !isCollidingAtTop(paddle2))
+                paddle2.setY(paddle2.getY() -11);
+            else if (!isCollidingAtBottom(paddle2))
+                paddle2.setY(paddle2.getY() +11);
         }
+
     }
     private void updateBall() {
         handleBallCollision();
+        handleBlocking();
         ball.move();
     }
 
-    private void handleBoundsCollisions() {
-        if (ball.getTop() +ball.getDy() < bounds.y
-                || ball.getBottom() +ball.getDy() > bounds.height) {
+    // physics handlers
+    private void handleBallCollision() {
+        // handling ball collisions with walls
+        handleBoundsCollision();
+        // handling ball collisions with paddles
+        handlePaddlesCollision();
+    }
+    private void handleBoundsCollision() {
+        if (isCollidingAtTop(ball)
+                || isCollidingAtBottom(ball)) {
             ball.changeDy();
         }
+
+
+
+        // DEBUG
         else if (ball.getLeft() +ball.getDx() < bounds.x
                 || ball.getRight() +ball.getDx() > bounds.width) {
             ball.changeDx();
         }
     }
-    private void handlePaddlesCollisions() {
-        if (ball.isCollidingWith(paddle1)
-                || ball.isCollidingWith(paddle2)) {
-            ball.changeDx();
+    private void handlePaddlesCollision() {
+        handleCollisionWith(paddle1);
+        handleCollisionWith(paddle2);
+    }
+    private void handleCollisionWith(Paddle paddle) {
+        handleTopBottomCollision(paddle);
+        handleLeftRightCollision(paddle);
+    }
+    private void handleTopBottomCollision(Paddle paddle) {
+        if (ball.isCollidingAtTopWith(paddle)) {
+            if (ball.getDy() < 0) {
+                ball.changeDy();
+            }
+        } else if (ball.isCollidingAtBottomWith(paddle)) {
+            if (ball.getDy() > 0) {
+                ball.changeDy();
+            }
         }
     }
-    private void handleBallCollision() {
-        // handling ball collisions with walls
-        handleBoundsCollisions();
-        // handling ball collisions with paddles
-        handlePaddlesCollisions();
+    private void handleLeftRightCollision(Paddle paddle) {
+        if (ball.isCollidingAtLeftWith(paddle)) {
+            if (ball.getDx() < 0) {
+                ball.changeDx();
+            }
+        } else if (ball.isCollidingAtRightWith(paddle)) {
+            if (ball.getDx() > 0) {
+                ball.changeDx();
+            }
+        }
+    }
+    private void handleBlocking() {
+        if (ball.getCenterY() < bounds.y) {
+            ball.setY(bounds.y);
+            ball.setX(ball.getX() -paddle1.getWidth());
+        } else if (ball.getCenterY() > bounds.height) {
+            ball.setY(bounds.height -ball.getRadius()*2);
+            ball.setX(ball.getX() -paddle1.getWidth());
+        }
+    }
+
+    // boolean methods
+    private boolean isCollidingAtTop(CollidableObject object) {
+        return object.getTop()
+                +object.getDy() < bounds.y;
+    }
+    private boolean isCollidingAtBottom(CollidableObject object) {
+        return object.getBottom()
+                +object.getDy() > bounds.height;
     }
 
 
@@ -119,7 +174,7 @@ public class World {
 
 
 
-    private void handlePaddlesCollisions(Paddle paddle) {
+    private void handlePaddlesCollision(Paddle paddle) {
         if (ball.isCollidingWith(paddle)) {
             /*if (ball.getTop() + ball.getDy() > paddle.getTop()
                     && ball.getBottom() + ball.getDy() < paddle.getBottom()) {
@@ -143,9 +198,11 @@ public class World {
     private void handleMovesOf(Sprite player) {
         if (playerDirection == (PlayerDirection.DOWN)) {
             player.setY(player.getY() +10);
+            ball.setDy(+6);
         }
         if (playerDirection == (PlayerDirection.UP)) {
             player.setY(player.getY() -10);
+            ball.setDy(-6);
         }
         if (playerDirection == (PlayerDirection.RIGHT)) {
             player.setX(player.getX() +10);

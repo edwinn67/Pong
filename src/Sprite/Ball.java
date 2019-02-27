@@ -7,8 +7,8 @@ public class Ball extends CollidableObject {
 
     // properties
     private int radius;
-    private int dx = 12;
-    private int dy = 6;
+    private int dx = 6;
+    private int dy = 12;
 
     // constructors
     public Ball() {
@@ -34,15 +34,19 @@ public class Ball extends CollidableObject {
     public void setRadius(int radius) {
         this.radius = radius;
     }
+    @Override
     public int getDx() {
         return dx;
     }
+    @Override
     public void setDx(int dx) {
         this.dx = dx;
     }
+    @Override
     public int getDy() {
         return dy;
     }
+    @Override
     public void setDy(int dy) {
         this.dy = dy;
     }

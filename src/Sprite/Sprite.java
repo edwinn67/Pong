@@ -23,7 +23,6 @@ public abstract class Sprite {
     public void setHeight(int height) {
         this.height = height;
     }
-    public void setLocation(int x, int y) {this.x = x; this.y = y;}
     public int getX() {
         return x;
     }
@@ -35,6 +34,31 @@ public abstract class Sprite {
     }
     public int getHeight() {
         return height;
+    }
+
+    // public methods
+    public void setLocation(int x, int y) {this.x = x; this.y = y;}
+    public int getTop() {
+        return this.getY();
+    }
+    public int getBottom() {
+        return this.getY()
+                +this.getHeight();
+    }
+    public int getLeft() {
+        return this.getX();
+    }
+    public int getRight() {
+        return this.getX()
+                +this.getWidth();
+    }
+    public int getCenterX() {
+        return this.getX()
+                +this.getWidth() /2;
+    }
+    public int getCenterY() {
+        return this.getY()
+                +this.getHeight() /2;
     }
 
     // abstract methods
