@@ -1,19 +1,15 @@
 package Sprite;
-import Physics.CollidableObject;
+import physics.CollidableObject;
 
 import java.awt.*;
 
 public class Paddle extends CollidableObject {
 
     // properties
-    private int dy = 10;
+    private int dy;
+    private int score;
 
     // constructors
-    public Paddle() {
-        super();
-        this.width = 20;
-        this.height = 120;
-    }
     public Paddle(int width, int height) {
         super();
         this.width = width;
@@ -21,6 +17,12 @@ public class Paddle extends CollidableObject {
     }
 
     // getters and setters
+    public int getScore() {
+        return score;
+    }
+    public void setScore(int score) {
+        this.score = score;
+    }
     @Override
     public int getDy() {
         return dy;
@@ -43,6 +45,14 @@ public class Paddle extends CollidableObject {
     public void draw(Graphics g) {
         g.setColor(new Color(255,255,255));
         g.fillRect(x, y, width, height);
+    }
+
+
+    public void moveUp() {
+        this.setY(this.getY() -this.getDy());
+    }
+    public void moveDown() {
+        this.setY(this.getY() +this.getDy());
     }
 
 

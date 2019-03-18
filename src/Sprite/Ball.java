@@ -1,28 +1,23 @@
 package Sprite;
-import Physics.CollidableObject;
 
+import physics.CollidableObject;
 import java.awt.*;
 
 public class Ball extends CollidableObject {
 
     // properties
     private int radius;
-    private int dx = 6;
-    private int dy = 12;
+    private int dx;
+    private int dy;
 
     // constructors
-    public Ball() {
-        super();
-    }
     public Ball(int radius) {
-        this();
         this.width = radius*2;
         this.height = radius*2;
 
         this.radius = radius;
     }
     public Ball(int width, int height) {
-        this();
         this.width = width;
         this.height = height;
     }
@@ -70,8 +65,7 @@ public class Ball extends CollidableObject {
         dy = -dy;
     }
     public void move() {
-        this.setLocation(this.getX() +dx,
-                this.getY() +dy);
+        this.setX(this.getX() +dx);
+        this.setY(this.getY() +dy);
     }
-
 }
