@@ -5,10 +5,9 @@ import java.awt.*;
 public class Debugger {
 
     private static Rectangle bounds = new Rectangle(
-            0,
-            0,
-            WindowManager.getWindowWidth(),
-            WindowManager.getWindowHeight());
+        0, 0,
+        WindowManager.getWindowWidth(),
+        WindowManager.getWindowHeight());
 
     public static void drawCenter(Graphics g) {
         int radius = 2;
