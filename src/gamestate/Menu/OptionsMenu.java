@@ -1,7 +1,7 @@
 package gamestate.Menu;
 
 import gamestate.Menu.Options.DifficultyOptions;
-import Util.GameStatesManager;
+import util.GameStatesManager;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

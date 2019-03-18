@@ -2,12 +2,12 @@ package gamestate;
 
 import gamestate.Menu.OptionsMenu;
 import physics.CollidableObject;
-import Sprite.Ball;
-import Sprite.Paddle;
-import Util.AudioFilePlayer;
-import Util.FontManager;
-import Util.GameStatesManager;
-import Util.WindowManager;
+import sprite.Ball;
+import sprite.Paddle;
+import util.AudioFilePlayer;
+import util.FontManager;
+import util.GameStatesManager;
+import util.WindowManager;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -16,25 +16,21 @@ import java.util.LinkedList;
 import java.util.Random;
 
 
-import static javax.sound.sampled.AudioSystem.getAudioInputStream;
-
-
 public class World implements GameState {
 
     // properties
     private final Rectangle bounds;
-    private PlayerDirection player1Direction;
-    private PlayerDirection player2Direction;
-    private boolean twoPlayers;
-    private int maxBallDy;
-    private int maxScore;
-
-    // enums
     private enum PlayerDirection {
         STAND,
         UP,
         DOWN
     }
+    private PlayerDirection player1Direction;
+    private PlayerDirection player2Direction;
+    private boolean twoPlayers;
+    private int maxBallDy;
+    private int maxScore;
+    private int paddlesDy;
 
     // sprites
     private Paddle paddle1;
@@ -46,75 +42,88 @@ public class World implements GameState {
         this.bounds = WindowManager.getBounds();
         this.twoPlayers = twoPlayers;
 
+        initGame();
+    }
+
+    // init
+    private void initGame() {
         initProps();
-        reset();
+        initSprites();
+        initSettings();
+        resetScore();
     }
     private void initProps() {
         maxBallDy = 8;
         maxScore = 10;
     }
-
-    // init world
     private void initSprites() {
-        // sprite's instantiation
-        paddle1 = new Paddle(15, 110);
-        paddle2 = new Paddle(15, 110);
-        ball = new Ball(15);
-
-        // init paddles
         initPaddles();
-
-        // init ball
         initBall();
     }
     private void initPaddles() {
-        // scope variables
+        // creating paddles
+        paddle1 = new Paddle(15, 110);
+        paddle2 = new Paddle(15, 110);
+
+        // setting up margin from borders
         int margin = 50;
 
-        // init paddle1
+        // setting up paddle1's position
         paddle1.setX(bounds.width -margin -paddle1.getWidth());
         paddle1.setY(bounds.height /2 -paddle1.getHeight());
-        paddle1.setDy(4);
 
-        // init paddle2
+        // setting up paddle2's position
         paddle2.setX(bounds.x +margin);
         paddle2.setY(bounds.height /2 -paddle2.getHeight());
-
-        initPaddle2Speed();
     }
     private void initBall() {
+        // creating ball
+        ball = new Ball(15);
+
+        // setting up ball's position
         ball.setX(bounds.width /2 -ball.getRadius());
         ball.setY(bounds.height /2 -ball.getRadius());
+
+        // setting up ball's properties
         ball.setDx(-4);
         ball.setDy(getRandomNumber(2,4));
     }
-    private void initPaddle2Speed() {
+    private void initSettings() {
+        initDifficultySettings();
+        initGraphicsSettings();
+    }
+    private void initDifficultySettings() {
+        paddlesDy = 4;
+        paddle1.setDy(paddlesDy);
+
         if (!twoPlayers) {
             if (OptionsMenu.getDifficulty() == 0) {
                 paddle2.setDy(getRandomNumber(2,3));
+                ball.setDx(getRandomNumber(4,5)*-1);
             }
             else if (OptionsMenu.getDifficulty() == 1) {
-                paddle2.setDy(getRandomNumber(4,6));
+                paddle2.setDy(getRandomNumber(4,5));
+                ball.setDx(getRandomNumber(6,7)*-1);
             }
             else if (OptionsMenu.getDifficulty() == 2) {
-                paddle2.setDy(getRandomNumber(7,8));
+                paddle2.setDy(getRandomNumber(6,7));
+                ball.setDx(getRandomNumber(7,8)*-1);
             }
         }
+        else {
+            paddle2.setDy(paddlesDy);
+        }
     }
+    private void initGraphicsSettings() {
 
-
-    // game over and reset
-    private void reset() {
-        initSprites();
-        resetScore();
-    }
+        }
     private void resetScore() {
         paddle1.setScore(0);
         paddle2.setScore(0);
     }
-    private boolean isGameOver() {
-        return ((paddle1.getScore() >= maxScore)
-                || (paddle2.getScore() >= maxScore));
+    private int getRandomNumber(int min, int max) {
+        long seed = LocalDateTime.now().getNano();
+        return min +(new Random(seed)).nextInt() % max;
     }
 
     // draw world
@@ -172,9 +181,6 @@ public class World implements GameState {
         updateBall();
         updateScore();
         updateState();
-
-//        play("src/Sounds/beep1.ogg");
-
     }
     private void updatePlayer1() {
         if (player1Direction == (PlayerDirection.UP)
@@ -241,6 +247,11 @@ public class World implements GameState {
             GameStatesManager.setGameState(new GameOver());
         }
     }
+    private boolean isGameOver() {
+        return ((paddle1.getScore() >= maxScore)
+                || (paddle2.getScore() >= maxScore));
+    }
+
 
     // physics handlers
     private void handleBallCollision() {
@@ -250,12 +261,25 @@ public class World implements GameState {
         handlePaddlesCollision();
     }
     private void handleBoundsCollision() {
+        // if ball is touching the top or the bottom
         if (isCollidingAtTop(ball)
                 || isCollidingAtBottom(ball)) {
+            // change ball's dy (direction-y)
             ball.changeDy();
+            // play bounds collision's sound
             AudioFilePlayer.playSound("src/sound/beep2.wav");
         }
-        handleBlocking();
+        // anti-bugging system
+        handleBugging();
+    }
+    private void handleBugging() {
+        if (ball.getTop() < bounds.y) {
+            ball.setY(bounds.y);
+            ball.setX(ball.getX() -paddle1.getWidth());
+        } else if (ball.getBottom() > bounds.height) {
+            ball.setY(bounds.height -ball.getRadius()*2);
+            ball.setX(ball.getX() -paddle1.getWidth());
+        }
     }
     private void handlePaddlesCollision() {
         handleCollisionWith(paddle1);
@@ -272,17 +296,6 @@ public class World implements GameState {
             AudioFilePlayer.playSound("src/sound/beep1.wav");
         }
     }
-    private void handleBlocking() {
-        if (ball.getTop() < bounds.y) {
-            ball.setY(bounds.y);
-            ball.setX(ball.getX() -paddle1.getWidth());
-        } else if (ball.getBottom() > bounds.height) {
-            ball.setY(bounds.height -ball.getRadius()*2);
-            ball.setX(ball.getX() -paddle1.getWidth());
-        }
-    }
-
-    // bounds collision methods
     private boolean isCollidingAtTop(CollidableObject object) {
         return object.getTop()
                 +object.getDy() < bounds.y;
@@ -291,6 +304,7 @@ public class World implements GameState {
         return object.getBottom()
                 +object.getDy() > bounds.height;
     }
+
 
     // handle keys
     @Override
@@ -334,10 +348,6 @@ public class World implements GameState {
 
 
 
-    private int getRandomNumber(int min, int max) {
-        long seed = LocalDateTime.now().getNano();
-        return min +(new Random(seed)).nextInt() % max;
-    }
 
 
 }

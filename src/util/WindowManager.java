@@ -1,4 +1,4 @@
-package Util;
+package util;
 
 import java.awt.*;
 
@@ -18,10 +18,9 @@ public class WindowManager {
     }
     public static Rectangle getBounds() {
         return new Rectangle(
-                0,
-                0,
-                WindowManager.getWindowWidth(),
-                WindowManager.getWindowHeight());
+            0, 0,
+            WindowManager.getWindowWidth(),
+            WindowManager.getWindowHeight());
     }
 
 

@@ -1,4 +1,4 @@
-package Sprite;
+package sprite;
 
 import physics.CollidableObject;
 import java.awt.*;

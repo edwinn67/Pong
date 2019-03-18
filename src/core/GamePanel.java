@@ -2,9 +2,9 @@ package core;
 
 import gamestate.Menu.MainMenu;
 import gamestate.GameState;
-import Util.FontManager;
-import Util.GameStatesManager;
-import Util.WindowManager;
+import util.FontManager;
+import util.GameStatesManager;
+import util.WindowManager;
 
 import javax.swing.*;
 import java.awt.*;

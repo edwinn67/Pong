@@ -1,6 +1,6 @@
 package physics;
 
-import Sprite.Sprite;
+import sprite.Sprite;
 
 public abstract class CollidableObject
         extends Sprite

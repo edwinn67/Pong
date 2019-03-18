@@ -1,9 +1,9 @@
 package gamestate;
 
 import gamestate.Menu.MainMenu;
-import Util.FontManager;
-import Util.GameStatesManager;
-import Util.WindowManager;
+import util.FontManager;
+import util.GameStatesManager;
+import util.WindowManager;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
