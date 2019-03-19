@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PONG:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PONG_jar</output-path>
+    <root id="archive" name="PONG.jar">
+      <element id="module-output" name="PONG" />
+      <element id="directory" name="res">
+        <element id="file-copy" path="$PROJECT_DIR$/res/ARCADE.ttf" />
+        <element id="file-copy" path="$PROJECT_DIR$/res/beep2.wav" />
+        <element id="file-copy" path="$PROJECT_DIR$/res/beep1.wav" />
+        <element id="file-copy" path="$PROJECT_DIR$/res/score.wav" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -14,17 +14,20 @@ public class GameOver implements GameState {
     // properties
     private String textGameOver;
     private final Rectangle bounds;
+    private FontManager fontManager;
+
 
     // constructors
     GameOver() {
         bounds = WindowManager.getBounds();
         textGameOver = "Game Over";
+        fontManager = new FontManager();
     }
 
     @Override
     public void draw(Graphics g) {
         drawBackground(g);
-        drawCenteredString(g, textGameOver, FontManager.getFont(60));
+        drawCenteredString(g, textGameOver, fontManager.getFont(60));
     }
     private void drawBackground(Graphics g) {
         g.setColor(new Color(0, 0, 0));

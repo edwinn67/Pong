@@ -2,6 +2,7 @@ package core;
 
 import gamestate.Menu.MainMenu;
 import gamestate.GameState;
+import gamestate.World;
 import util.FontManager;
 import util.GameStatesManager;
 import util.WindowManager;
@@ -35,9 +36,7 @@ public class GamePanel extends JPanel
 
         timer.start();
 
-        // should start from menu
         GameStatesManager.setGameState(new MainMenu());
-        FontManager.loadFont();
     }
 
 
@@ -46,7 +45,6 @@ public class GamePanel extends JPanel
         actualGameState.draw(g);
         actualGameState.update();
     }
-
 
 
     @Override

@@ -20,6 +20,8 @@ public class World implements GameState {
 
     // properties
     private final Rectangle bounds;
+    private FontManager fontManager;
+    private AudioFilePlayer audioFilePlayer;
     private enum PlayerDirection {
         STAND,
         UP,
@@ -32,6 +34,7 @@ public class World implements GameState {
     private int maxScore;
     private int paddlesDy;
 
+
     // sprites
     private Paddle paddle1;
     private Paddle paddle2;
@@ -40,8 +43,10 @@ public class World implements GameState {
     // constructor
     public World(boolean twoPlayers) {
         this.bounds = WindowManager.getBounds();
-        this.twoPlayers = twoPlayers;
+        this.fontManager = new FontManager();
+        this.audioFilePlayer = new AudioFilePlayer();
 
+        this.twoPlayers = twoPlayers;
         initGame();
     }
 
@@ -99,15 +104,15 @@ public class World implements GameState {
         if (!twoPlayers) {
             if (OptionsMenu.getDifficulty() == 0) {
                 paddle2.setDy(getRandomNumber(2,3));
-                ball.setDx(getRandomNumber(4,5)*-1);
+//                ball.setDx(getRandomNumber(4,5)*-1);
             }
             else if (OptionsMenu.getDifficulty() == 1) {
                 paddle2.setDy(getRandomNumber(4,5));
-                ball.setDx(getRandomNumber(6,7)*-1);
+//                ball.setDx(getRandomNumber(6,7)*-1);
             }
             else if (OptionsMenu.getDifficulty() == 2) {
                 paddle2.setDy(getRandomNumber(6,7));
-                ball.setDx(getRandomNumber(7,8)*-1);
+//                ball.setDx(getRandomNumber(7,8)*-1);
             }
         }
         else {
@@ -116,7 +121,7 @@ public class World implements GameState {
     }
     private void initGraphicsSettings() {
 
-        }
+    }
     private void resetScore() {
         paddle1.setScore(0);
         paddle2.setScore(0);
@@ -126,7 +131,7 @@ public class World implements GameState {
         return min +(new Random(seed)).nextInt() % max;
     }
 
-    // draw world
+    // draw
     @Override
     public void draw(Graphics g) {
         drawBackground(g);
@@ -158,8 +163,7 @@ public class World implements GameState {
     }
     private void drawScore(Graphics g) {
         int size = 80;
-
-        Font font = FontManager.getFont(size);
+        Font font = fontManager.getFont(size);
         FontMetrics metrics = g.getFontMetrics(font);
 
         g.setFont(font);
@@ -233,12 +237,12 @@ public class World implements GameState {
     private void updateScore() {
         if (ball.getLeft() < bounds.x) {
             paddle1.setScore(paddle1.getScore() +1);
-            AudioFilePlayer.playSound("src/sound/score.wav");
+            audioFilePlayer.PlaySound("/res/score.wav");
             initBall();
         } else
         if (ball.getRight() > bounds.width) {
             paddle2.setScore(paddle2.getScore() +1);
-            AudioFilePlayer.playSound("src/sound/score.wav");
+            audioFilePlayer.PlaySound("/res/score.wav");
             initBall();
         }
     }
@@ -267,12 +271,13 @@ public class World implements GameState {
             // change ball's dy (direction-y)
             ball.changeDy();
             // play bounds collision's sound
-            AudioFilePlayer.playSound("src/sound/beep2.wav");
+            audioFilePlayer.PlaySound("/res/beep2.wav");
         }
         // anti-bugging system
         handleBugging();
     }
     private void handleBugging() {
+        // if ball is stuck on top
         if (ball.getTop() < bounds.y) {
             ball.setY(bounds.y);
             ball.setX(ball.getX() -paddle1.getWidth());
@@ -287,13 +292,12 @@ public class World implements GameState {
     }
     private void handleCollisionWith(Paddle paddle) {
         if (ball.isCollidingWith(paddle)) {
-            int yDiff =
-                    ball.getCenterY()
-                            -paddle.getCenterY();
+            int yDiff = ball.getCenterY()
+                    -paddle.getCenterY();
 
             ball.setDy(yDiff / maxBallDy);
             ball.changeDx();
-            AudioFilePlayer.playSound("src/sound/beep1.wav");
+            audioFilePlayer.PlaySound("/res/beep1.wav");
         }
     }
     private boolean isCollidingAtTop(CollidableObject object) {

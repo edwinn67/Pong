@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="PONG:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b0ea76-a13a-4fe7-bc11-c59857f2bfcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jorbis_0_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/GameController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/physics/GlobalCostants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Debugger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Debugger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PONG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PONG.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Core/GameController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Core/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Core/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/GameState/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/GameState/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/META-INF/PONG.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Util/AudioFilePlayer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Util/AudioFilePlayer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Util/AudioFilePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Util/AudioFilePlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Util/Debugger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Util/Debugger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/Util/FontManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/Util/FontManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/font/ARCADE.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/gamestate/GameOver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/gamestate/GameOver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/gamestate/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/gamestate/Menu/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/gamestate/World$PlayerDirection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PONG/gamestate/World$PlayerDirection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/physics/GlobalCostants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/sound/beep1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/sound/beep2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PONG/sound/score.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/font/ARCADE.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sound/beep1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sound/beep2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sound/score.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestate/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestate/GameOver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestate/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestate/Menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestate/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestate/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/AudioFilePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/AudioFilePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/FontManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/FontManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,104 +49,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core/GamePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#paint#0;class#GamePanel#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/WindowManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gamestate/World.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#556#632#0" />
-                <element signature="e#818#981#0" />
-                <element signature="e#1223#1299#0" />
-                <element signature="e#1258#1336#0" />
-                <element signature="e#1337#1414#0" />
-                <element signature="e#1419#1937#0" />
-                <element signature="e#1942#2282#0" />
-                <element signature="e#1301#1379#0" />
-                <element signature="e#2401#3130#0" />
-                <element signature="e#2524#3061#1" />
-                <element signature="e#3075#3124#1" />
-                <element signature="e#1408#1451#0" />
-                <element signature="e#2168#2259#0" />
-                <element signature="e#3270#3430#0" />
-                <element signature="e#2265#2428#0" />
-                <element signature="e#2433#2589#0" />
-                <element signature="e#2594#2710#0" />
-                <element signature="e#2715#3143#0" />
-                <element signature="e#3148#3697#0" />
-                <element signature="e#3703#3883#0" />
-                <element signature="e#3888#4220#0" />
-                <element signature="e#4225#4388#0" />
-                <element signature="e#4393#4731#0" />
-                <element signature="e#4736#5289#0" />
-                <element signature="e#5294#5379#0" />
-                <element signature="e#5384#5684#0" />
-                <element signature="e#5689#5821#0" />
-                <element signature="e#6956#7095#0" />
-                <element signature="e#5827#6056#0" />
-                <element signature="e#6061#6253#0" />
-                <element signature="e#7768#8112#0" />
-                <element signature="e#6258#6379#0" />
-                <element signature="e#6384#6678#0" />
-                <element signature="e#7034#7206#0" />
-                <element signature="e#7211#7362#0" />
-                <element signature="e#7368#7445#0" />
-                <element signature="e#7450#7511#0" />
-                <element signature="e#7516#7577#0" />
-                <element signature="e#7582#7739#0" />
-                <element signature="e#7744#8121#0" />
-                <element signature="e#8126#8499#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/core/GameFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/AudioFilePlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="421">
+              <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/Debugger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -124,23 +61,95 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/util/FontManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="194">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#loadFont#0;class#FontManager#0" />
-                <element signature="e#674#675#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gamestate/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="294" selection-start-line="294" selection-end-line="295" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#483#559#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/physics/Collidable.java">
+        <entry file="file://$PROJECT_DIR$/src/gamestate/Menu/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="219">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Menu#0;class#Menu#0" />
+                <element signature="method#initProps#0;class#Menu#0" />
+                <element signature="method#drawBackground#0;class#Menu#0" />
+                <element signature="method#drawCursor#0;class#Menu#0" />
+                <element signature="method#initFont#0;class#Menu#0" />
+                <element signature="method#getHorizontalPositionOf#0;class#Menu#0" />
+                <element signature="method#getVerticalPositionOf#0;class#Menu#0" />
+                <element signature="method#onKeyTyped#0;class#Menu#0" />
+                <element signature="method#onKeyPressed#0;class#Menu#0" />
+                <element signature="method#onKeyReleased#0;class#Menu#0" />
+                <element signature="method#handleKeys#0;class#Menu#0" />
+                <element signature="method#goBack#0;class#Menu#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/AudioFilePlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#playSound#0;class#AudioFilePlayer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gamestate/GameOver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/GameFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#426#427#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gamestate/Menu/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,7 +158,7 @@
         <entry file="file://$PROJECT_DIR$/src/physics/CollidableObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="method#isCollidingWith#0;class#CollidableObject#0" />
                 <element signature="method#isCollidingAtTopWith#0;class#CollidableObject#0" />
@@ -166,10 +175,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#265#266#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -198,6 +203,14 @@
       <find>GameStatesManager.setGameState(</find>
       <find>optionsmenu</find>
       <find>setDy</find>
+      <find>src</find>
+      <find>font/</find>
+      <find>font</find>
+      <find>FontManager.</find>
+      <find>Font</find>
+      <find>FontManager fm</find>
+      <find>sound</find>
+      <find>soun</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -206,10 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/GameFrame.java" />
-        <option value="$PROJECT_DIR$/src/core/GameFrame.java" />
-        <option value="$PROJECT_DIR$/src/core/GraphicsEngine.java" />
         <option value="$PROJECT_DIR$/src/sprite/Sprite.java" />
         <option value="$PROJECT_DIR$/src/sprite/Paddle.java" />
         <option value="$PROJECT_DIR$/src/Core/GraphicsEngine.java" />
@@ -252,17 +261,24 @@
         <option value="$PROJECT_DIR$/src/GameState/World.java" />
         <option value="$PROJECT_DIR$/src/Util/AudioFilePlayer.java" />
         <option value="$PROJECT_DIR$/src/Util/WindowManager.java" />
-        <option value="$PROJECT_DIR$/src/gamestate/World.java" />
         <option value="$PROJECT_DIR$/src/utils/WindowManager.java" />
         <option value="$PROJECT_DIR$/src/util/WindowManager.java" />
-        <option value="$PROJECT_DIR$/src/util/FontManager.java" />
         <option value="$PROJECT_DIR$/src/util/Debugger.java" />
+        <option value="$PROJECT_DIR$/src/core/GamePanel.java" />
+        <option value="$PROJECT_DIR$/src/util/FontManager.java" />
+        <option value="$PROJECT_DIR$/src/gamestate/Menu/Menu.java" />
+        <option value="$PROJECT_DIR$/src/gamestate/GameOver.java" />
+        <option value="$PROJECT_DIR$/src/util/AudioFilePlayer.java" />
+        <option value="$PROJECT_DIR$/src/gamestate/World.java" />
       </list>
     </option>
   </component>
+  <component name="NamedScopeManager">
+    <scope name="res" pattern="src:res.*" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-53" />
-    <option name="y" value="-17" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -271,8 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,13 +297,7 @@
             <path>
               <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pong" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
@@ -299,27 +307,36 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="pong" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552935512479" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552990004698" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Sounds/jorbis-0.0.17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/res/score.wav" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\franc\Documents\Projects\Java\Pong\out\production" />
+      <recent name="C:\Users\franc\Documents\Projects\Java\Pong\src\res" />
+      <recent name="C:\Users\franc\Documents\Projects\Java\Pong\res" />
       <recent name="C:\Users\franc\Documents\Projects\Java\Pong\src\sound" />
       <recent name="C:\Users\franc\Documents\Projects\Java\Pong\src\Font" />
-      <recent name="C:\Users\franc\Documents\Projects\Java\Pong\src\GameState" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="GameState.Menu" />
@@ -340,7 +357,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GameFrame">
+  <component name="RunManager" selected="JAR Application.Pong - Jar">
     <configuration name="GameFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="D:\Program Files\Java\jdk-11.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -363,9 +380,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Pong - Jar" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/PONG_jar/PONG.jar" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\franc\Documents\Projects\Java\Pong" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="D:\Program Files\Java\jdk-11.0.2" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.GameFrame" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JAR Application.Pong - Jar" />
     </list>
     <recent_temporary>
       <list>
@@ -410,12 +435,14 @@
       <workItem from="1552548404456" duration="4816000" />
       <workItem from="1552635411065" duration="6443000" />
       <workItem from="1552719528654" duration="2051000" />
-      <workItem from="1552892532550" duration="22899000" />
+      <workItem from="1552892532550" duration="24131000" />
+      <workItem from="1552940235644" duration="5933000" />
+      <workItem from="1552978078194" duration="11073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="215302000" />
+    <option name="totallyTimeSpent" value="233540000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,9 +455,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948078" visible="true" weight="0.1444563" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49948078" visible="true" weight="0.14765458" />
       <window_info id="Structure" order="1" sideWeight="0.5005192" side_tool="true" weight="0.1444563" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -439,7 +465,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26687434" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26687434" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -447,7 +473,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32885906" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3281412" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -461,8 +487,8 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49948078" visible="true" weight="0.14765458" />
+      <window_info id="Structure" order="1" sideWeight="0.5005192" side_tool="true" weight="0.1444563" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -470,7 +496,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2357217" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26687434" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -546,18 +572,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/GameController.java" />
     <entry file="jar://D:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -568,32 +583,7 @@
     <entry file="file://$PROJECT_DIR$/src/GameState/GameStates.java" />
     <entry file="file://$PROJECT_DIR$/src/Physics/PlayerDirection.java" />
     <entry file="file://$PROJECT_DIR$/src/Util/GameStates.java" />
-    <entry file="file://$PROJECT_DIR$/src/GameState/Menu/DifficultyOptions.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamestate/Menu/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="65" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Menu#0;class#Menu#0" />
-            <element signature="method#initProps#0;class#Menu#0" />
-            <element signature="method#drawBackground#0;class#Menu#0" />
-            <element signature="method#drawTitle#0;class#Menu#0" />
-            <element signature="method#drawCursor#0;class#Menu#0" />
-            <element signature="method#initFont#0;class#Menu#0" />
-            <element signature="method#getHorizontalPositionOf#0;class#Menu#0" />
-            <element signature="method#getVerticalPositionOf#0;class#Menu#0" />
-            <element signature="method#onKeyTyped#0;class#Menu#0" />
-            <element signature="method#onKeyPressed#0;class#Menu#0" />
-            <element signature="method#onKeyReleased#0;class#Menu#0" />
-            <element signature="method#handleKeys#0;class#Menu#0" />
-            <element signature="method#goBack#0;class#Menu#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameState/Menu/DifficultyOptions.java" />
     <entry file="file://$PROJECT_DIR$/src/gamestate/Menu/OptionsMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -616,13 +606,6 @@
             <element signature="method#update#0;class#DifficultyOptions#0" />
             <element signature="method#handleChoice#0;class#DifficultyOptions#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamestate/GameOver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -669,113 +652,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamestate/Menu/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#update#0;class#MainMenu#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/GamePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#paint#0;class#GamePanel#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamestate/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#556#632#0" />
-            <element signature="e#818#981#0" />
-            <element signature="e#1223#1299#0" />
-            <element signature="e#1258#1336#0" />
-            <element signature="e#1337#1414#0" />
-            <element signature="e#1419#1937#0" />
-            <element signature="e#1942#2282#0" />
-            <element signature="e#1301#1379#0" />
-            <element signature="e#2401#3130#0" />
-            <element signature="e#2524#3061#1" />
-            <element signature="e#3075#3124#1" />
-            <element signature="e#1408#1451#0" />
-            <element signature="e#2168#2259#0" />
-            <element signature="e#3270#3430#0" />
-            <element signature="e#2265#2428#0" />
-            <element signature="e#2433#2589#0" />
-            <element signature="e#2594#2710#0" />
-            <element signature="e#2715#3143#0" />
-            <element signature="e#3148#3697#0" />
-            <element signature="e#3703#3883#0" />
-            <element signature="e#3888#4220#0" />
-            <element signature="e#4225#4388#0" />
-            <element signature="e#4393#4731#0" />
-            <element signature="e#4736#5289#0" />
-            <element signature="e#5294#5379#0" />
-            <element signature="e#5384#5684#0" />
-            <element signature="e#5689#5821#0" />
-            <element signature="e#6956#7095#0" />
-            <element signature="e#5827#6056#0" />
-            <element signature="e#6061#6253#0" />
-            <element signature="e#7768#8112#0" />
-            <element signature="e#6258#6379#0" />
-            <element signature="e#6384#6678#0" />
-            <element signature="e#7034#7206#0" />
-            <element signature="e#7211#7362#0" />
-            <element signature="e#7368#7445#0" />
-            <element signature="e#7450#7511#0" />
-            <element signature="e#7516#7577#0" />
-            <element signature="e#7582#7739#0" />
-            <element signature="e#7744#8121#0" />
-            <element signature="e#8126#8499#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/AudioFilePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics/GlobalCostants.java" />
     <entry file="file://$PROJECT_DIR$/src/util/WindowManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics/GlobalCostants.java">
+    <entry file="file://$PROJECT_DIR$/src/util/Debugger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/FontManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#loadFont#0;class#FontManager#0" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="378">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -786,10 +674,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/font/ARCADE.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/EventDispatchThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/ARCADE.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/GameStatesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/physics/CollidableObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="method#isCollidingWith#0;class#CollidableObject#0" />
             <element signature="method#isCollidingAtTopWith#0;class#CollidableObject#0" />
@@ -800,28 +708,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/GameStatesManager.java">
+    <entry file="file://$PROJECT_DIR$/PONG.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/ARCADE.ttf">
+      <provider selected="true" editor-type-id="fontseditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core/GameFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Debugger.java">
+    <entry file="file://$PROJECT_DIR$/src/gamestate/Menu/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="80">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core/GameFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/core/GamePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="421">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamestate/Menu/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Menu#0;class#Menu#0" />
+            <element signature="method#initProps#0;class#Menu#0" />
+            <element signature="method#drawBackground#0;class#Menu#0" />
+            <element signature="method#drawCursor#0;class#Menu#0" />
+            <element signature="method#initFont#0;class#Menu#0" />
+            <element signature="method#getHorizontalPositionOf#0;class#Menu#0" />
+            <element signature="method#getVerticalPositionOf#0;class#Menu#0" />
+            <element signature="method#onKeyTyped#0;class#Menu#0" />
+            <element signature="method#onKeyPressed#0;class#Menu#0" />
+            <element signature="method#onKeyReleased#0;class#Menu#0" />
+            <element signature="method#handleKeys#0;class#Menu#0" />
+            <element signature="method#goBack#0;class#Menu#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamestate/GameOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/FontManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/AudioFilePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#playSound#0;class#AudioFilePlayer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamestate/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="294" selection-start-line="294" selection-end-line="295" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#483#559#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,10 +812,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>PONG:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -882,6 +865,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -889,7 +873,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jorbis-0.0</last-edited>
+          <last-edited>res</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -897,6 +881,21 @@
               </list>
             </option>
           </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>res</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="res" />
+          </order>
         </settings>
       </state>
     </states>

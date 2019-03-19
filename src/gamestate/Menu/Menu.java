@@ -20,6 +20,8 @@ public abstract class Menu implements GameState {
     protected static boolean isKeyPressed;
     protected String title;
     protected int choice;
+    protected FontManager fontManager;
+
 
 
     // constructors
@@ -27,6 +29,7 @@ public abstract class Menu implements GameState {
         this.bounds = WindowManager.getBounds();
         initProps();
         fillMenu();
+        fontManager = new FontManager();
     }
 
     // init methods
@@ -41,7 +44,7 @@ public abstract class Menu implements GameState {
         g.fillRect(bounds.x, bounds.y, bounds.width, bounds.height);
     }
     protected void drawTitle(Graphics g) {
-        Font font = FontManager.getFont(90);
+        Font font = fontManager.getFont(90);
         FontMetrics metrics = g.getFontMetrics(font);
         initFont(g, font);
 
@@ -51,7 +54,7 @@ public abstract class Menu implements GameState {
         g.drawString(title, x, y);
     }
     protected void drawMenu(Graphics g) {
-        Font font = FontManager.getFont(28);
+        Font font = fontManager.getFont(28);
         FontMetrics metrics = g.getFontMetrics(font);
         initFont(g, font);
 

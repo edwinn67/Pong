@@ -10,20 +10,13 @@ public class AudioFilePlayer extends Thread {
 
     public static synchronized void playSound(String path) {
         new Thread(new Runnable() {
-            // The wrapper thread is unnecessary, unless it blocks on the
-            // Clip finishing; see comments.
             public void run() {
                 try {
-
-                    //read audio data from whatever source (file/classloader/etc.)
-//                    InputStream audioSrc = getClass().getResourceAsStream(path);
-//add buffer for mark/reset support
-//                    InputStream bufferedIn = new BufferedInputStream(audioSrc);
-                    AudioInputStream inputStream = AudioSystem.getAudioInputStream(new File(path));
-
+                    AudioInputStream inputStream =
+                            AudioSystem.getAudioInputStream(
+                                    getClass().getResourceAsStream(path));
                     Clip clip = AudioSystem.getClip();
-                    /*AudioInputStream inputStream = AudioSystem.getAudioInputStream(
-                            getClass().getResourceAsStream(path));*/
+
                     clip.open(inputStream);
                     clip.start();
                 } catch (Exception e) {
@@ -31,5 +24,18 @@ public class AudioFilePlayer extends Thread {
                 }
             }
         }).start();
+    }
+
+    public void PlaySound(String filename) {
+        try (InputStream in = getClass().getResourceAsStream(filename)) {
+            InputStream bufferedIn = new BufferedInputStream(in);
+            try (AudioInputStream audioIn = AudioSystem.getAudioInputStream(bufferedIn)) {
+                Clip clip = AudioSystem.getClip();
+                clip.open(audioIn);
+                clip.start();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
